@@ -11,3 +11,19 @@ Your maze must be 10x10. Other rules are as follows:
 
 ## Stage 2
 In this stage, you will develop an algorithm for creating a maze.
+
+## Stage 3
+The program should provide a menu with five options:
+
+1. Generate a new maze.
+2. Load a maze.
+3. Save the maze.
+4. Display the maze.
+5. Exit.
+
+After a maze is generated or loaded from a file, it becomes the current maze that can be saved or displayed.
+
+If there is no current maze (generated or loaded), a user should not see the options save and display the maze.
+
+You must always check the result of processing files and display user-friendly messages.
+
