@@ -13,6 +13,7 @@ public class Main {
             "2. Load a maze\n" +
             "3. Save the maze\n" +
             "4. Display the maze\n" +
+            "5. Find the escape\n" +
             "0. Exit";
 
     private static Maze currentMaze;
@@ -37,27 +38,25 @@ public class Main {
                     currentMaze = Maze.deserialize(scan.nextLine());
                     break;
                 case "3":
-                    if (currentMaze == null) {
-                        System.out.println("Incorrect option. Please try again");
-                        continue;
-                    } else {
+                    if (currentMaze != null) {
                         System.out.println("Enter file to save a maze to");
                         currentMaze.serialize(scan.nextLine());
+                        break;
                     }
-                    break;
                 case "4":
-                    if (currentMaze == null) {
-                        System.out.println("Incorrect option. Please try again");
-                        continue;
-                    } else {
+                    if (currentMaze != null) {
                         currentMaze.print();
+                        break;
                     }
-                    break;
+                case "5":
+                    if (currentMaze != null) {
+                        currentMaze.escape();
+                        break;
+                    }
                 case "0":
                     return;
                 default:
                     System.out.println("Incorrect option. Please try again");
-                    continue;
             }
         }
     }

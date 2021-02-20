@@ -27,3 +27,6 @@ If there is no current maze (generated or loaded), a user should not see the opt
 
 You must always check the result of processing files and display user-friendly messages.
 
+## Stage 4
+Modify the menu by adding a new option: **Find the escape.**
+Do not save the data about the escape path to the files and do not display the escape path when the user chooses the fourth option. Mark the escape with `/` symbol.
